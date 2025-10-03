@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelPlanner - Hotels</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>TravelPlanner</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="services.html">Plans & Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Booking Form -->
+<section class="booking-form">
+  <h2>Book Your Hotel</h2>
+  <form id="hotelForm">
+    <label for="hotel">Select Hotel:</label>
+    <select id="hotel" name="hotel" required>
+      <option value="">--Choose Hotel--</option>
+      <option value="Hotel Paradise">Hotel Paradise</option>
+      <option value="City Inn">City Inn</option>
+      <option value="Mountain Retreat">Mountain Retreat</option>
+    </select>
+
+    <label for="checkin">Check-in Date:</label>
+    <input type="date" id="checkin" name="checkin" required>
+
+    <label for="checkout">Check-out Date:</label>
+    <input type="date" id="checkout" name="checkout" required>
+
+    <label for="guests">Number of Guests:</label>
+    <input type="number" id="guests" name="guests" min="1" max="10" value="1" required>
+
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<!-- Hotels Cards -->
+<section class="destinations">
+  <h2>Our Hotels</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501117716987-c8eaa0d94a02?auto=format&fit=crop&w=800&q=80" alt="Hotel Paradise">
+      <div class="card-body">
+        <h3>Hotel Paradise</h3>
+        <p>Luxury resort with sea view, spa, and fine dining.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=800&q=80" alt="City Inn">
+      <div class="card-body">
+        <h3>City Inn</h3>
+        <p>Modern city hotel close to major attractions.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Mountain Retreat">
+      <div class="card-body">
+        <h3>Mountain Retreat</h3>
+        <p>Cozy mountain cabins surrounded by nature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 TravelPlanner. All rights reserved.</p>
+  <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+</footer>
+
+<script>
+  const form = document.getElementById('hotelForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    sessionStorage.setItem('hotel', form.hotel.value);
+    sessionStorage.setItem('checkin', form.checkin.value);
+    sessionStorage.setItem('checkout', form.checkout.value);
+    sessionStorage.setItem('guests', form.guests.value);
+    window.location.href = 'booking-confirmation.html';
+  });
+</script>
+</body>
+</html>

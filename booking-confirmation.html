@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmation - TravelPlanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>TravelPlanner</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="services.html">Plans & Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="confirmation">
+  <h2>Booking Confirmation</h2>
+  <div class="confirmation-box">
+    <p id="bookingDetails"></p>
+    <a href="index.html"><button>Back to Home</button></a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 TravelPlanner. All rights reserved.</p>
+  <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+</footer>
+
+<script>
+  const hotel = sessionStorage.getItem('hotel');
+  const checkin = sessionStorage.getItem('checkin');
+  const checkout = sessionStorage.getItem('checkout');
+  const guests = sessionStorage.getItem('guests');
+  document.getElementById('bookingDetails').innerHTML = `
+    <strong>Hotel:</strong> ${hotel} <br>
+    <strong>Check-in:</strong> ${checkin} <br>
+    <strong>Check-out:</strong> ${checkout} <br>
+    <strong>Guests:</strong> ${guests}
+  `;
+</script>
+</body>
+</html>
