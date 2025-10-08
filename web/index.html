@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelPlanner - Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1 data-lang-key="brand">TravelPlanner</h1>
+  <nav>
+    <a href="index.html" data-lang-key="home">Home</a>
+    <a href="hotels.html" data-lang-key="hotels">Hotels</a>
+    <a href="services.html" data-lang-key="services">Plans & Services</a>
+    <a href="login.html" data-lang-key="login">Login</a>
+    <a href="#contact" data-lang-key="contact">Contact</a>
+  </nav>
+  <select id="language" class="lang-select">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="fr">French</option>
+    <option value="de">German</option>
+    <option value="es">Spanish</option>
+  </select>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2 data-lang-key="hero_title">Explore the World in Luxury</h2>
+    <p data-lang-key="hero_text">Discover breathtaking destinations with premium experiences</p>
+    <a href="hotels.html"><button data-lang-key="book_now_btn">Book Your Stay</button></a>
+  </div>
+</section>
+
+<section class="destinations" id="destinations">
+  <h2 data-lang-key="popular_destinations">Popular Destinations</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Paris">
+      <div class="card-body">
+        <h3>Paris</h3>
+        <p data-lang-key="paris_desc">The city of lights and love. Explore iconic landmarks and exquisite cuisine.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3fb?auto=format&fit=crop&w=800&q=80" alt="Maldives">
+      <div class="card-body">
+        <h3>Maldives</h3>
+        <p data-lang-key="maldives_desc">Pristine beaches and turquoise waters. Perfect for a luxury getaway.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="New York">
+      <div class="card-body">
+        <h3>New York</h3>
+        <p data-lang-key="ny_desc">The city that never sleeps. Enjoy urban adventures and cultural landmarks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 TravelPlanner. All rights reserved.</p>
+  <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
